@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=ol, initial-scale=1.0">
+    <title>HOMEPAGE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Kalam&family=Nerko+One&family=Playfair+Display+SC&family=Playfair+Display:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        /*======== header =========*/
+        #header {
+
+            
+        }
+
+        .navbar ul {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar ul li {
+            list-style: none;
+            padding:  0px;
+
+        }
+
+        
+
+        .navbar ul li a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            position: relative;
+            padding: 10px 20px;
+            z-index: 1;
+
+        }
+        .leftbutton::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: all .5s ease-in-out;
+            border-radius: 20px;
+
+        }
+        .leftbutton:hover:before{
+            transform: scaleX(1);
+        }
+        .centerbutton::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: scaleX(0);
+            
+            transition: all 1s ease-in-out;
+            border-radius: 20px;
+
+        }
+        .centerbutton:hover:before{
+            transform: scaleX(1);
+        }
+        .rightbutton::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: all .5s ease-in-out;
+            border-radius: 20px;
+
+        }
+        .rightbutton:hover:before{
+            transform: scaleX(1);
+        }
+        .companyname {
+            position: relative;
+            color: white;
+            padding: 15rem 0 5rem;
+
+        }
+
+        .companyname h1 {
+            font-size: 5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        #header::before {
+            content: "";
+            background: url(./images/header.jpg) no-repeat center center/cover fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+           height: 100%;
+            position: absolute;
+
+
+
+        }
+
+        /*======== featured ========*/
+        #featured {
+            background-color: rgb(238, 232, 232);
+            position: relative;
+            padding: 100px 0px;
+        }
+
+        #featured .welcome {
+            font-size: 2.5rem;
+            font-family: 'BhuTuka Expanded One', cursive;
+        }
+
+        #featured .info {
+            padding: 30px 150px 50px;
+
+        }
+
+        #featured .container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 50px 0px;
+        }
+
+        #featured .box {
+            text-align: center;
+            margin: 0px 10px;
+
+
+        }
+
+        #featured .box img {
+            width: 50px;
+            height: 50px;
+            opacity: 0.4;
+            margin-top: 30px;
+        }
+
+        #featured .box h3 {
+            font-family: 'BhuTuka Expanded One', cursive;
+            margin-top: 20px;
+
+        }
+
+        #featured .box p {
+            margin-top: 10px;
+            padding: 10px 20px;
+        }
+
+        #featured .box button {
+            background-color: rgb(96, 199, 106);
+            border: none;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 30px 0px 20px;
+            font-weight: bold;
+        }
+
+        #featured .box button:hover {
+            color: white;
+            background-color: green;
+        }
+
+        /*======== main =========*/
+        #main {
+            background-color: rgb(255, 255, 255);
+            position: relative;
+        }
+
+        #main .gallery {
+            padding: 30px 0px;
+        }
+
+        #main .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 30px;
+        }
+
+        #main .content {
+            border: 2px solid rgb(216, 202, 202);
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        #main .content img {
+            width: 100%;
+            height: 100%;
+
+            padding: 20px 10px;
+
+        }
+
+        #main .content h3 {
+            font-family: 'BhuTuka Expanded One', cursive;
+            padding-top: 10px;
+        }
+
+        #main .content p {
+            padding: 10px 30px;
+        }
+
+        /*======== tweet ========*/
+        #tweet {
+            position: relative;
+            padding: 4em 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        #tweet::before {
+            content: "";
+            background: url("./images/header.jpg") no-repeat center center/cover fixed;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+
+        }
+
+        #tweet p {
+
+            font-size: 2rem;
+            font-family: 'Kalam', cursive;
+            color: rgb(255, 255, 255);
+            position: relative;
+        }
+
+        /*======== footer========*/
+        #footer {
+            color: rgb(97, 96, 96);
+            background-color: black;
+
+
+        }
+
+        #footer .touch h3 {
+            color: white;
+            padding-top: 70px;
+            font-size: 3rem;
+            font-family: 'BhuTuka Expanded One', cursive;
+        }
+
+        #footer .touch p {
+            margin-top: 20px;
+        }
+
+        #footer .social ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #footer .social ul li {
+            padding: 50px 20px;
+
+        }
+
+        #footer .social ul li a img:hover {
+            opacity: 1;
+        }
+
+        #footer .social ul li a img {
+            width: 50px;
+            height: 50px;
+            opacity: 0.4;
+            filter: invert(1);
+
+
+        }
+
+        /*======== copyright =========*/
+        #copyright {
+            background-color: black;
+            color: rgb(184, 180, 180);
+
+        }
+
+        #copyright p {
+            padding: 2rem;
+            font-family: 'Nerko One', cursive;
+        }
+
+
+        /*========media query max-width=580px ===========*/
+        @media screen and (max-width:580px) {
+
+            .navbar ul{
+                display:block;
+            }
+            .navbar ul li a{
+                display: inline-block;
+            }
+
+            .navbar ul .menu {
+                position: relative;
+                display: block;
+            }
+
+            #featured .info {
+                padding: 30px 100px 50px;
+
+            }
+
+            #featured .container {
+                position: relative;
+                display: block;
+                padding: 50px 50px 0px;
+            }
+
+            #featured .box {
+                margin-top: 20px;
+                border-bottom: 1px solid;
+            }
+
+            #main .row {
+                display: block;
+                position: relative;
+            }
+        }
+    </style>
+</head>
+
+<body id="fullpage">
+    <!--header-->
+    <div id="header">
+        <div class="navbar">
+            <ul class="list">
+                
+                <li><a href="./leftside.html" target="_blank" class="leftbutton">LEFT SIDEBAR</a></li>
+                <li><a href="./layout3.html" target="_blank" class="centerbutton">HOMEPAGE</a></li>
+                
+                <li><a href="./rightside.html" target="_blank" class="rightbutton">RIGHT SIDEBAR</a></li>
+            </ul>
+        </div>
+        <div class="companyname">
+            <div class="logo">
+                <h1>Linear</h1>
+                <span>By TEMPLATED</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Featured-->
+    <div id="featured">
+        <div class="welcome">
+            <p><b>Welcome to Linear</b></p>
+        </div>
+        <div class="info">
+            <p>This is <b>Linear</b>, a responsive HTML5 site template freebie by TEMPLATED. Released for free under the
+                Creative Commons Attribution license, so use it for whatever (personal or commercial) – just give us
+                credit! Check out more of our stuff at our site or follow us on Twitter.</p>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="box">
+                <div class="logo1">
+                    <img src="./images/briefcase-solid.svg" alt="">
+                </div>
+                <h3>Maecenas luctus lectus</h3>
+                <p>Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat vel, suscipit
+                    in, mattis placerat, nulla. Sed ac leo.</p>
+                <div class="readmore">
+                    <button>Read More</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="logo2">
+                    <img src="./images/lock-solid.svg" alt="">
+                </div>
+                <h3>Maecenas luctus lectus</h3>
+                <p>Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies
+                    quis, justo. Donec magna..</p>
+                <div class="readmore">
+                    <button>Read More</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="logo3">
+                    <img src="./images/earth-africa-solid.svg" alt="">
+                </div>
+                <h3>Maecenas luctus lectus</h3>
+                <p>Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat vel, suscipit
+                    in, mattis placerat, nulla. Sed ac leo.</p>
+                <div class="readmore">
+                    <button>Read More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <div id="main">
+        <div class="gallery">
+            <div class="row">
+                <div class="content">
+                    <img src="./images/pic01.jpg" alt="">
+                    <h3>Mauris vulputate dolor</h3>
+                    <p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra
+                        vulputate enim. Aliquam erat volutpat. Donec leo, vivamus fermentum nibh in augue praesent a
+                        lacus at urna congue rutrum.</p>
+                </div>
+                <div class="content">
+                    <img src="./images/pic02.jpg" alt="">
+                    <h3>Mauris vulputate dolor</h3>
+                    <p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra
+                        vulputate enim. Aliquam erat volutpat. Donec leo, vivamus fermentum nibh in augue praesent a
+                        lacus at urna congue rutrum.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="content">
+                    <img src="./images/pic03.jpg" alt="">
+                    <h3>Mauris vulputate dolor</h3>
+                    <p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra
+                        vulputate enim. Aliquam erat volutpat. Donec leo, vivamus fermentum nibh in augue praesent a
+                        lacus
+                        at urna congue rutrum.</p>
+                </div>
+                <div class="content">
+                    <img src="./images/pic04.jpg" alt="">
+                    <h3>Mauris vulputate dolor</h3>
+                    <p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra
+                        vulputate enim. Aliquam erat volutpat. Donec leo, vivamus fermentum nibh in augue praesent a
+                        lacus
+                        at urna congue rutrum.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--tweet-->
+    <div id="tweet">
+        <p>“In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate
+            enim. Aliquam erat volutpat.”</p>
+    </div>
+
+    <!--footer-->
+    <div id="footer">
+        <div class="touch">
+            <h3>Get in Touch</h3>
+            <p>Integer sit amet pede vel arcu aliquet pretium</p>
+        </div>
+        <div class="social">
+            <ul>
+                <li><a href=""><img src="./images/twitter.svg" alt=""></a></li>
+                <li><a href=""><img src="./images/facebook.svg" alt=""></a></li>
+                <li><a href=""><img src="./images/instagram.svg" alt=""></a></li>
+                <li><a href=""><img src="./images/linkedin.svg" alt=""></a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!--copyright-->
+    <div id="copyright">
+        <div class="copy">
+            <p>Design: TEMPLATED Images: Unsplash (CC0)</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

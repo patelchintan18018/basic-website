@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leftside</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Kalam&family=Nerko+One&family=Playfair+Display+SC&family=Playfair+Display:wght@400;500&family=Roboto&family=Roboto+Slab:wght@300&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+
+            position: relative;
+        }
+
+        /*======== header ========*/
+        .navbar ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            background-color: rgba(0, 0, 0, .3);
+
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            z-index: 1;
+        }
+
+        .leftbutton::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: all 1s ease-in-out;
+            border-radius: 20px;
+
+        }
+        .leftbutton:hover:before{
+            transform: scaleX(1);
+        }
+        .centerbutton::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: scaleX(0);
+            
+            transition: all .5s ease-in-out;
+            border-radius: 20px;
+
+        }
+        .centerbutton:hover:before{
+            transform: scaleX(1);
+        }
+        .rightbutton::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: all .5s ease-in-out;
+            border-radius: 20px;
+
+        }
+        .rightbutton:hover:before{
+            transform: scaleX(1);
+        }
+
+        .companyname {
+            color: white;
+            padding: 8rem 0;
+            text-align: center;
+        }
+
+        .companyname h1 {
+
+            font-size: 5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        #header::before {
+            content: "";
+            position: absolute;
+            background: url("images/header.jpg") no-repeat center center/cover;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+
+        }
+
+        /*======== main-content =========*/
+        #main-content {
+            display: flex;
+
+        }
+
+        /*===column1===*/
+        .column1 {
+
+            width: 33.33%;
+            padding-left: 2rem;
+
+        }
+
+        .column1 h3 {
+            padding-top: 3rem;
+            font-size: 2rem;
+            font-family: 'Roboto', sans-serif;
+            color: rgb(112, 116, 120);
+        }
+
+        .column1 .list {
+            display: flex;
+            padding-top: 1rem;
+        }
+
+        .line {
+            padding-right: 2rem;
+        }
+
+        .line:last-child {
+            padding-right: 0;
+        }
+
+        .line ul li {
+            padding-top: 1.5rem;
+            
+        }
+
+        .line ul li a {
+            color: rgb(96, 199, 106);
+
+        }
+        
+
+        .infocontent .box {
+            padding-top: 2rem;
+        }
+
+        .box p {
+            padding: .5rem 0;
+        }
+
+        /*===column2===*/
+        .column2 {
+            width: 66.66%;
+
+            padding: 0 2rem 5rem;
+        }
+
+        .column2 .leftsideheading {
+            font-size: 1.5rem;
+            color: rgb(112, 116, 120);
+        }
+
+        .column2 h1 {
+            padding-top: 3rem;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .column2 :nth-child(3) {
+            padding-top: 2rem;
+        }
+
+        .column2 h3 {
+            padding-top: 1rem;
+
+        }
+
+        .column2 p {
+            padding-top: 1rem;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        /*======== tweet ========*/
+        #tweet {
+            position: relative;
+            padding: 4em 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        #tweet::before {
+            content: "";
+            background: url("./images/header.jpg") no-repeat center center/cover fixed;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+
+        }
+
+        #tweet p {
+
+            font-size: 2rem;
+            font-family: 'Kalam', cursive;
+            color: rgb(255, 255, 255);
+            position: relative;
+        }
+
+        /*======== footer========*/
+        #footer {
+            color: rgb(97, 96, 96);
+            background-color: black;
+            text-align: center;
+
+        }
+
+        #footer .touch h3 {
+            color: white;
+            padding-top: 5rem;
+            font-size: 3rem;
+            font-family: 'BhuTuka Expanded One', cursive;
+        }
+
+        #footer .touch p {
+            margin-top: 20px;
+        }
+
+        #footer .social ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0;
+        }
+
+        #footer .social ul li a{
+           padding: 0px 10px;
+
+        }
+
+        #footer .social ul li a img:hover {
+            opacity: 1;
+        }
+
+        #footer .social ul li a img {
+            width: 3rem;
+            height: 3rem;
+            opacity: 0.4;
+            filter: invert(1);
+
+
+        }
+
+        /*======== copyright =========*/
+        #copyright {
+            background-color: black;
+            color: rgb(184, 180, 180);
+            text-align: center;
+        }
+
+        #copyright p {
+            padding: 2rem;
+            font-family: 'Nerko One', cursive;
+        }
+
+        /*========media query max-width=580px ===========*/
+        @media screen and (max-width:580px) {
+
+            .navbar ul {
+                display: block;
+                text-align: center;
+            }
+
+            .navbar ul li a {
+                display: inline-block;
+            }
+
+            .navbar ul .menu {
+                position: relative;
+                display: block;
+            }
+            #main-content{
+                flex-direction: column-reverse;
+
+            }
+            .column1 , .column2{
+                width: 100%;
+            }
+           
+        }
+    </style>
+</head>
+
+<body>
+    <!--header-->
+    <div id="header">
+        <div class="navbar">
+            <ul class="list">
+                
+                <li><a href="./leftside.html" target="_blank" class="leftbutton">LEFT SIDEBAR</a></li>
+                <li><a href="./index.html" target="_blank" class="centerbutton">HOMEPAGE</a></li>
+                
+                <li><a href="./rightside.html" target="_blank" class="rightbutton">RIGHT SIDEBAR</a></li>
+            </ul>
+        </div>
+        <div class="companyname">
+            <div class="logo">
+                <h1>Linear</h1>
+                <span>By TEMPLATED</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!--main-content-->
+    <div id="main-content">
+        <div class="column1">
+            <div class="listitems">
+                <div class="listheading">
+                    <h3>Etiam malesuada</h3>
+                </div>
+                <div class="list">
+                    <div class="line">
+                        <ul>
+                            <li><a href="#">Donec facilisis tempor</a></li>
+                            <li><a href="#">Nulla convallis cursus</a></li>
+                            <li><a href="#">Integer congue euismod</a></li>
+                            <li><a href="#">Venenatis vulputate</a></li>
+                            <li><a href="#">Morbi ligula volutpat</a></li>
+                        </ul>
+                    </div>
+                    <div class="line">
+                        <ul>
+                            <li><a href="#">Donec facilisis tempor</a></li>
+                            <li><a href="#">Nulla convallis cursus</a></li>
+                            <li><a href="#">Integer congue euismod</a></li>
+                            <li><a href="#">Venenatis vulputate</a></li>
+                            <li><a href="#">Morbi ligula volutpat</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="infoheading">
+                    <h3>Mauris vulputate</h3>
+                </div>
+                <div class="infocontent">
+                    <div class="box">
+                        <p>MAY 21, 2014 | (10 ) COMMENTS</p>
+                        <p>Nullam non wisi a sem eleifend. Donec mattis libero eget urna. Pellentesque viverra enim.</p>
+                    </div>
+                    <div class="box">
+                        <p>MAY 21, 2014 | (10 ) COMMENTS</p>
+                        <p>Nullam non wisi a sem eleifend. Donec mattis libero eget urna. Pellentesque viverra enim.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column2">
+            <div class="leftsideheading">
+                <h1>Left Sidebar</h1>
+            </div>
+            <h3>Integer sit amet pede vel arcu aliquet pretium</h3>
+            <p>Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor enim
+                accumsan lacinia. Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet
+                eros quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper
+                vitae, turpis. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo.
+                Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem.
+                Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna
+                quis risus. Quisque eleifend. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit</p>
+            <p>Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor enim
+                accumsan lacinia. Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet
+                eros quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper
+                vitae, turpis. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo.
+                Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem.
+                Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna
+                quis risus. Quisque eleifend. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit</p>
+            <p>Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor enim
+                accumsan lacinia. Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet
+                eros quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper
+                vitae, turpis. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo.
+                Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem.
+                Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna
+                quis risus. Quisque eleifend. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit</p>
+            <p>Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor enim
+                accumsan lacinia. Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet
+                eros quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper
+                vitae, turpis. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo.
+                Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem.
+                Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna
+                quis risus. Quisque eleifend. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit</p>
+        </div>
+
+    </div>
+    <!--tweet-->
+    <div id="tweet">
+        <p>“In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate
+            enim. Aliquam erat volutpat.”</p>
+    </div>
+
+    <!--footer-->
+    <div id="footer">
+        <div class="touch">
+            <h3>Get in Touch</h3>
+            <p>Integer sit amet pede vel arcu aliquet pretium</p>
+        </div>
+        <div class="social">
+            <ul>
+                <li><a href=""><img src="./images/twitter.svg" alt=""></a></li>
+                <li><a href=""><img src="./images/facebook.svg" alt=""></a></li>
+                <li><a href=""><img src="./images/instagram.svg" alt=""></a></li>
+                <li><a href=""><img src="./images/linkedin.svg" alt=""></a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!--copyright-->
+    <div id="copyright">
+        <div class="copy">
+            <p>Design: TEMPLATED Images: Unsplash (CC0)</p>
+        </div>
+    </div>
+</body>
+
+</html>
